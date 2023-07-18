@@ -1,12 +1,19 @@
 class Task {
   #name;
+  #id
   #description;
   #status;
 
-  constructor(name = 'Task', description = 'To be completed', status = false) {
+  constructor(name = 'Task', description = 'To be completed', 
+              status = false, id = 1) {
     this.name = name;
     this.description = description;
     this.status = status;
+    this.id = id;
+  }
+
+  get id() {
+    return this.id;
   }
 
   get status() {
